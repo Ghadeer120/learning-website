@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f8ff;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 600px;
+  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Left section styles */
+.left-section {
+  flex: 1;
+  background-color: #f0f8ff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  max-width: 450px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #e6f7f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-circle i {
+  color: #00bcd4;
+  font-size: 14px;
+}
+
+.feature-text h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.feature-text p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Right section styles */
+.right-section {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 24px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  color: #999;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.tab.active {
+  color: #333;
+  border-bottom: 2px solid #00bcd4;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  color: #666;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.social-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.social-button i {
+  font-size: 16px;
+}
+
+.social-button.google i {
+  color: #DB4437;
+}
+
+.social-button.facebook i {
+  color: #4267B2;
+}
+
+.social-button:hover {
+  background-color: #f7f7f7;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #999;
+  font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #eee;
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #00bcd4;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+}
+
+.form-group.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.form-group.checkbox input {
+  margin-top: 3px;
+}
+
+.form-group.checkbox label {
+  font-size: 13px;
+  font-weight: normal;
+  color: #555;
+  line-height: 1.4;
+}
+
+.term-link {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.term-link:hover {
+  text-decoration: underline;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #00a0b7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      max-width: 100%;
+      box-shadow: none;
+  }
+  
+  .left-section {
+      padding: 30px 20px;
+  }
+  
+  .right-section {
+      padding: 20px;
+  }
+  
+  .form-container {
+      max-width: 100%;
+  }
+}
+
+
+
+/* Change link colors */
+a {
+color: #00a0b7;
+text-decoration: none;
+font-weight: bold;
+}
+
+a:hover {
+color: #008a99; /* Slightly darker on hover */
+text-decoration: underline;
+}
+
+/* Style for terms & forgot password links */
+.term-link, .forgot-password a {
+color: #00a0b7;
+}
+
+.term-link:hover, .forgot-password a:hover {
+color: #008a99;
+text-decoration: underline;
+}
+
+/* Tabs styling */
+.tabs .tab a {
+color: #00a0b7;
+}
+
+.tabs .tab a:hover {
+color: #008a99;
+text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+/* Select input styles (to match the design of text/email/password fields) */
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  background-color: white;
+  appearance: none; /* Remove default dropdown arrow in some browsers */
+  -webkit-appearance: none; /* Remove default dropdown arrow in Safari */
+  -moz-appearance: none; /* Remove default dropdown arrow in Firefox */
+  transition: border-color 0.2s;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Focus state for select dropdown (when focused, border color changes) */
+select:focus {
+  outline: none;
+  border-color: #00bcd4;
+}
+
+/* Style for the wrapper around the select element */
+.input-with-icon {
+  position: relative;
+  display: block;
+}
+
+/* Optional: Custom dropdown arrow */
+.select-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Style for form-group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Additional form and input field styling */
+input[type="text"], input[type="email"], input[type="password"], select {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #00bcd4;
+}
+
+/* Styling for submit button */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #00a0b7;
+}
